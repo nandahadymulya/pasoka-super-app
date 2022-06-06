@@ -1,9 +1,7 @@
 <template>
   <v-row>
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
   </v-row>
 </template>

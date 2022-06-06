@@ -1,197 +1,34 @@
 <template>
-  <v-row>
-    <v-col cols="8">
-      <h2 class="text-center">Bagian Umum & Sistem Manajemen</h2>
-      <p>Struktur Organisasi</p>
-      <p>Kepala Bagian</p>
-      <p>Kepala Seksi</p>
-      <p>Anggota</p>
-    </v-col>
-
-    <v-col cols="4">
-      Daftar Menu
-      <v-container>
-        <v-row>
-          <v-col v-for="(item, index) in items" :key="index">
-            <v-card
-              class="rounded justify-center"
-              outline
-              tile
-              width="140"
-              height="100"
-            >
-              <div>
-                <img :src="item.icon" alt="icon" width="36" />
-              </div>
-              <div>
-                <NuxtLink :to="item.link"> {{ item.name }} </NuxtLink>
-              </div>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-col>
-  </v-row>
+  <div>
+    <v-container grid-list-xs fluid>
+      <v-row>
+        <v-col cols="12" md="9">
+          <v-layout wrap>
+            <h3 class="title grey--text">Umum & Sistem Manajemen</h3>
+            <v-spacer></v-spacer>
+            <v-btn icon>
+              <v-icon>mdi-arrow-right</v-icon>
+            </v-btn>
+          </v-layout>
+        </v-col>
+        <v-col cols="12" md="3"></v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <CardComponent />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
+import CardComponent from '@/components/Card.vue'
+
 export default {
   name: 'GeneralPage',
-  data() {
-    return {
-      items: [
-        {
-          name: 'Dokumen',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Permohonan',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Dokumen',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Permohonan',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Dokumen',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Permohonan',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Dokumen',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Permohonan',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Dokumen',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Permohonan',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Dokumen',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Permohonan',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Dokumen',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Permohonan',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Daftar Lelang',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-      ],
-    }
+  components: {
+    CardComponent,
   },
 }
 </script>

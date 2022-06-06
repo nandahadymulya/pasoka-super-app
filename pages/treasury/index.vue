@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="9">
           <v-layout wrap>
-            <h3 class="title grey--text">Overview</h3>
+            <h3 class="title grey--text">Perbendaharaan</h3>
             <v-spacer></v-spacer>
             <v-btn icon>
               <v-icon>mdi-arrow-right</v-icon>
@@ -26,7 +26,7 @@
 import CardComponent from '@/components/Card.vue'
 
 export default {
-  name: 'DashboardPage',
+  name: 'TreasuryPage',
   components: {
     CardComponent,
   },

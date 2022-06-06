@@ -1,55 +1,34 @@
 <template>
-  <v-row align="center" class="border">
-    <v-col class="p-2">
-      <h2>Bagian Transportasi & Pemeliharaan</h2>
-
-      <div>
-        <v-card
-          v-for="(item, index) in items"
-          :key="index"
-          class="d-flex flex-row mb-6 pa-4"
-          outline
-          tile
-          width="200"
-          height="auto"
-        >
-          <div>
-            <div>
-              <img :src="item.icon" alt="icon" width="40" />
-            </div>
-            <div>
-              <NuxtLink :to="item.link"> {{ item.name }} </NuxtLink>
-            </div>
-          </div>
-        </v-card>
-      </div>
-    </v-col>
-  </v-row>
+  <div>
+    <v-container grid-list-xs fluid>
+      <v-row>
+        <v-col cols="12" md="9">
+          <v-layout wrap>
+            <h3 class="title grey--text">Transportasi & Pemeliharaan</h3>
+            <v-spacer></v-spacer>
+            <v-btn icon>
+              <v-icon>mdi-arrow-right</v-icon>
+            </v-btn>
+          </v-layout>
+        </v-col>
+        <v-col cols="12" md="3"></v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <CardComponent />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
+import CardComponent from '@/components/Card.vue'
+
 export default {
-  name: 'TransportationPage',
-  data() {
-    return {
-      items: [
-        {
-          name: 'Data Truk',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Data Supir',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-        {
-          name: 'Data Pemeliharaan Ban',
-          icon: 'assets/icons/document.svg',
-          link: '/general/documents',
-        },
-      ],
-    }
+  name: 'AccountingPage',
+  components: {
+    CardComponent,
   },
 }
 </script>
